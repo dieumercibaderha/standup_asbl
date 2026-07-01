@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter Stand-UP Asbl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .header {
+            text-align: center;
+            background: #ff6200;
+            color: white;
+            font-size: 24px;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .header img {
+            width: 150px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .content {
+            padding: 20px;
+            text-align: justify;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: #f36907;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px auto;
+        }
+        .footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #777;
+            border-radius: 0 0 8px 8px;
+        }
+        .footer div a img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img  src="https://www.asblstandup.org/{% static 'img/logo.png' %}" alt="Logo">
+            <b><p> CONTACT </p></b>
+        </div>
+        <div class="content">
+           
+            <b>
+                <p>
+                 Nom:{{nom}} <br>
+                 Email: {{email}} <br> <br>
+
+                 {{message}}
+              </p>
+            </b>
+            
+            
+        </div>
+         <div class="footer">
+            <p>📩 Cher admin veuillez agir au mail le plus tot possible</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61577127975183&mibextid=rS40aB7S9Ucbxw6v">
+                    <img src="https://www.asblstandup.org/{% static 'img/fb.png' %}" alt="Facebook">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61577127975183&mibextid=rS40aB7S9Ucbxw6v">
+                    <img src="https://www.asblstandup.org/{% static 'img/twitte.png' %}" alt="Twitter">
+                </a>
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>

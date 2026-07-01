@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter Stand-UP Asbl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .header {
+            text-align: center;
+            background: #ff6200;
+            color: white;
+            font-size: 24px;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .header img {
+            width: 150px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .content {
+            padding: 20px;
+            text-align: justify;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: #f36907;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px auto;
+        }
+        .footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #777;
+            border-radius: 0 0 8px 8px;
+        }
+        .footer div a img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img  src="https://www.asblstandup.org/{% static 'img/logo.png' %}" alt="Logo">
+            <b><p> Bienvenue dans la communauté Stand-UP Asbl ! </p></b>
+        </div>
+        <div class="content">
+           
+            <b>
+                <p>
+                Nous sommes ravis de t’accueillir dans notre newsletter officielle !Chaque semaine, tu recevras des articles exclusifs, des astuces pratiques, et les dernières actualités sur nos initiatives et événements. Ici, c’est bien plus qu’un simple email : c’est un espace d’échange, de découverte et d’apprentissage. 
+                Ce qui t’attend : 
+                <ul>
+                    <li>Des conseils et stratégies sur la surveillance épidemiologique </li>
+                    <li>Nos projets et collaborations inspirantes  </li>
+                    <li>Les événements et conférences à ne pas manquer</li>
+                    
+                </ul>    
+              <br>
+            Merci d’avoir rejoint notre newsletter ! Si tu as des idées ou des sujets que tu aimerais voir abordés, <a href="https://www.asblstandup.org/contact">contactez nous</a>. <br> À très vite, L’équipe Stand-UP Asbl
+                ;Découvre notre dernier article sur les recentes réalisations de notre organisation</p>
+            </b>
+            
+            <a href="https://www.asblstandup.org/article" class="button">Lire l'article</a>
+        </div>
+         <div class="footer">
+            <p>📩 Tu reçois cet email car tu es abonné à notre newsletter.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61577127975183&mibextid=rS40aB7S9Ucbxw6v">
+                    <img src="https://www.asblstandup.org/{% static 'img/fb.png' %}" alt="Facebook">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61577127975183&mibextid=rS40aB7S9Ucbxw6v">
+                    <img src="https://www.asblstandup.org/{% static 'img/twitte.png' %}" alt="Twitter">
+                </a>
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>

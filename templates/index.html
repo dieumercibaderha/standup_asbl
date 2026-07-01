@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>STAND UP/ ACCUEIL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link  href="{% static 'img/stand.png' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>90 Boulevard Alexandre Mahamba, Quartier Kyeshero,
+                     Goma, République Démocratique du Congo</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@mystandup.online</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Suivez-nous sur:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61577127975183"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.tiktok.com/@standupasbl?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="{% url 'index' %}" class="navbar-brand ms-4 ms-lg-0">
+                <img class="position-relative" 
+                        src="{% static 'img/stand1.png' %}" alt="" style="width: 130px; height: 100px;">
+                <h1  hidden class="fw-bold text-primary m-0" >Stand <span class="text-white">Up</span></h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="{% url 'index'  %}" class="nav-item nav-link active">Accueil</a>
+                    <a href="{% url 'apropos' %}" class="nav-item nav-link">A propos de nous</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Nos Réalisations</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="{% url 'realisation' %}" class="dropdown-item">de 2020 à 2021</a>
+                            <a href="{% url 'realisation1' %}" class="dropdown-item">de 2022 à 2023</a>
+                            <a href="{% url 'realisation2' %}" class="dropdown-item">de 2024 à nos jours</a>
+                            
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Autres</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="{% url 'service' %}" class="dropdown-item">Service</a>
+                            <a href="{% url 'equipe' %}" class="dropdown-item">Nos Personnels</a>
+                            <a href="{% url 'emploi' %}" class="dropdown-item">Opportunités d'emploi</a>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn btn-outline-primary py-2 px-3" href="">
+                        Faites un don maintenant
+                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'img/vie.jpg' %}" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h6 class="display-4 text-white mb-2 animated slideInDown" style="font-size: 30px;">Vive le partenariat BCZ/KIROTSHE - STAND-UP </h6>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">« Nous ne recevions plus les alertes venant des agents communautaire... </p>
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="{% url 'article' %}#1">
+                                        Lire l'article ...
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" >
+                    <img class="w-100" src="{% static 'img/tel.jpg' %}" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h6 class="display-4 text-white mb-2 animated slideInDown" style="font-size: 30px;">
+                                        Un téléphone chargé suffit pour alerter </h6>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">À RUBAYA, malgré une bonne connexion GSM,
+                                         le manque de téléphones et de crédits bloque la transmission des données...</p>
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="{% url 'article' %}#4">
+                                        Lire l'article ...
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/ngungu.jpg' %}" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h2 class="display-4 text-white mb-2 animated slideInDown" style="font-size: 30px;">Sauver des vies à NGUNGU </h2>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Pour faire parvenir la situation de la surveillance communautaire dans leurs ...</p>
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
+                                        Lire l'article ...
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/tel.jpg' %}" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h2 class="display-4 text-white mb-2 animated slideInDown" style="font-size: 30px;">Quand le menu USSD sauve des vies</h2>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown"> STAND-UP a réuni les relais communautaires des pools Sake et Bweremana
+                                         à KIROTSHE (02-03 mai 2025) pour ...</p>
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="{% url 'article' %}#3">
+                                        Lire l'article ...
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/it.jpg' %}" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h1 class="display-4 text-white mb-2 animated slideInDown" style="font-size: 30px;">Formation des ITs avec STAND-UP</h1>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">31 Infirmiers Titulaires, leurs adjoints et autres Agents 
+                                        de santé ont pris part à ... 
+                                       </p>
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="{% url 'article' %}#2">
+                                        Lire l'article ...
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+
+                
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
+                        <img class="position-absolute w-100 h-100 pt-5 pe-5" src="{% static 'img/ab.jpg' %}" alt="" style="object-fit: cover;">
+                        <img  class="position-absolute top-0 end-0 bg-white ps-2 pb-2" 
+                        src="{% static 'img/stand.png' %}" alt="" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Apropos de nous</div>
+                        <h1 class="display-6 mb-5">Qui sommes-nous?</h1>
+                        <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
+                            <p class="text-dark mb-2">Nous sommes une association sans but lucratif denomée: "Solution Techniques Adaptées et Novatrices pour le développement Universel des Populations, <b>STAND-UP en sigle</b></p>
+                            <span hidden class="text-primary">Leonardo SHAMAMBA, Fondateur</span>
+                        </div>
+                        <p class="mb-5">Nous oeuvrons dans le domaine de la santé, de la sécurité alimentaire, des  moyens de subistance et bientôt les droits humains et l'éducation.</p>
+                        <a class="btn btn-primary py-2 px-3 me-3" href="{% url 'apropos' %}">
+                            savoir plus
+                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        <a class="btn btn-outline-primary py-2 px-3" href="{% url 'contact' %}">
+                            Contactez nous
+                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Causes Start -->
+    <div class="container-xxl bg-light my-5 py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Réalisations antérieures</div>
+                <h1 class="display-6 mb-5">Nos recentes activités</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
+                                <small>Projet SENET</small>
+                            </div>
+                            <h5 class="mb-3">Descente sur terrain pour la formation des RECO (Rélais communautaires)</h5>
+                            <p>Une descente effectué dans le but de former et d'integrer les relais communautaires dans 
+                                la manipulation du 
+        système d'alerte électronique des cas de maladies à potentiel épidemique dans la zone de santé de Kirotshe au Nord-Kivu en RDC </p>
+                            <div class="causes-progress bg-light p-3 pt-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-dark">Executé à <small class="text-body">KIROTSHE</small></p>
+                                    <p class="text-dark">en <small class="text-body">2025</small></p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="{% static 'img/act1.jpg' %}" alt="">
+                            <div class="causes-overlay">
+                                <a class="btn btn-outline-primary" href="{% url 'realisation2' %}">
+                                    Lire plus
+                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
+                                <small>Projet SENET</small>
+                            </div>
+                            <h5 class="mb-3">Surveillance Epidemiologique par Notification Electronique en Temps Réel</h5>
+                            <p>Il s'agit de l'implementation d'un système de surveillance et d'alertes electroniques de cas des maladies à potentiel épidémique </p>
+                            <div class="causes-progress bg-light p-3 pt-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-dark">implementé à <small class="text-body">KIROTSHE</small></p>
+                                    <p class="text-dark">en <small class="text-body">2025</small></p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="{% static 'img/act2.jpg' %}" alt="">
+                            <div class="causes-overlay">
+                                <a class="btn btn-outline-primary" href="{% url 'realisation2'  %}">
+                                    Lire plus
+                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
+                                <small>Projet d'appui</small>
+                            </div>
+                            <h5 class="mb-3">Projet d'appui et d'assistance au système de santé du Nord-KIVU</h5>
+                            <p>Distribution des kits d'hygiènes de base au 4 sites de cantonnement des deplacés dans l'aire de santé AFYA SAKE</p>
+                            <div class="causes-progress bg-light p-3 pt-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-dark">Executé à <small class="text-body">SAKE</small></p>
+                                    <p class="text-dark">Année <small class="text-body">2022</small></p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="{% static 'img/kita.jpg' %}" alt="">
+                            <div class="causes-overlay">
+                                <a class="btn btn-outline-primary" href="{% url 'realisation1' %}">
+                                   Lire plus
+                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Causes End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Ce que nous faisons</div>
+        <h1 class="display-6 mb-5">Nos domaines d'intervention</h1>
+    </div>
+    <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                <img class="img-fluid mb-4" src="{% static 'img/h.png' %}" alt="">
+                <h4 class="mb-3">Santé</h4>
+                <p class="mb-4">Nous œuvrons pour garantir un accès aux soins médicaux et à la prévention des maladies à travers des campagnes de sensibilisation, des services de soins et des actions humanitaires.</p>
+                <a class="btn btn-outline-primary px-3" hidden href="">
+                    En savoir plus
+                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+            <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                <img class="img-fluid mb-4" src="{% static 'img/m.png' %}" alt="">
+                <h4 class="mb-3">Moyens de subsistance</h4>
+                <p class="mb-4" >
+                    Nous nous engageons à renforcer la résilience des communautés en favorisant des 
+                    moyens de subsistance durables et inclusifs. À travers des programmes adaptés, nous soutenons l'entrepreneuriat local, 
+                    l'accès à des formations professionnelles et le développement d'activités génératrices de revenus.
+                </p>
+                <a class="btn btn-outline-primary px-3" hidden href="">
+                    En savoir plus
+                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                <img class="img-fluid mb-4" src="{% static 'img/a.png' %}" alt="">
+                <h4 class="mb-3">Sécurité alimentaire</h4>
+                <p class="mb-4">Nous travaillons à assurer un accès durable à la nourriture en soutenant
+                     l’agriculture, en distribuant des denrées alimentaires et en sensibilisant à la nutrition.</p>
+                <a class="btn btn-outline-primary px-3" hidden href="">
+                    En savoir plus
+                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s" hidden >
+            <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                <img class="img-fluid mb-4" style="width:100px; height:100px;" src="{% static 'img/wash.png' %}" alt="">
+                <h4 class="mb-3">WASH</h4>
+                <p class="mb-4"> Nous travaillons à assurer un accès durable à l’eau,
+                     à l’assainissement et à l’hygiène en améliorant les infrastructures WASH,
+                      en promouvant les bonnes pratiques sanitaires
+                     et en sensibilisant les communautés à l’importance de l’eau potable et de l’hygiène.</p>
+                <a class="btn btn-outline-primary px-3" hidden href="">
+                    En savoir plus
+                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                <img class="img-fluid mb-4" src="{% static 'img/d.png' %}" alt="">
+                <h4 class="mb-3">Droits humains</h4>
+                <p class="mb-4" style="color:red"> Ce service est actuellement en cours de développement 
+                    et sera bientôt disponible. Nous travaillons activement pour vous offrir des solutions 
+                    adaptées dans le domaine de droits humains. Restez connectés pour plus d’informations</p>
+                <a class="btn btn-outline-primary px-3" hidden href="">
+                    En savoir plus
+                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+       
+        
+        
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                <img class="img-fluid mb-4" src="{% static 'img/icon-1.png' %}" alt="">
+                <h4 class="mb-3">Éducation</h4>
+                <p class="mb-4" style="color: red;">Cette branche est actuellement en cours de
+                     développement et sera bientôt disponible. 
+                    Nous travaillons activement pour vous offrir des solutions 
+                    adaptées dans le domaine de l'éducation. 
+                    Restez connectés pour plus d’informations</p>
+                <a class="btn btn-outline-primary px-3" hidden href="">
+                    En savoir plus
+                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Donate Start -->
+       <!--  <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="{% static 'img/carousel-2.jpg' %}">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Donate Now</div>
+                        <h1 class="display-6 text-white mb-5">Thanks For The Results Achieved With You</h1>
+                        <p class="text-white-50 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="h-100 bg-white p-5">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control bg-light border-0" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control bg-light border-0" id="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="btn-group d-flex justify-content-around">
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked>
+                                            <label class="btn btn-light py-3" for="btnradio1">$10</label>
+
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
+                                            <label class="btn btn-light py-3" for="btnradio2">$20</label>
+
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
+                                            <label class="btn btn-light py-3" for="btnradio3">$30</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary px-5" style="height: 60px;">
+                                            Donate Now
+                                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                                <i class="fa fa-arrow-right"></i>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+        <!-- Donate End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Membres de l'équipe</div>
+                <h1 class="display-6 mb-5">Equipe cadre de direction</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/leo.jpg' %}" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h6 style="font-size: 13px;">Leonardo SHAMAMBA KINYUNGU</h6>
+                            <p class="text-primary" style="font-size: 15px;">Président du Conseil d'Administration</p>
+                            <div class="team-social text-center" hidden>
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/jeff1.jpg' %}" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5 style="font-size: 15px;">Jeff MULONDA MATENDA</h5>
+                            <p class="text-primary" style="font-size: 15px;">Vice-Président du Conseil d'Administration</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/dps.jpg' %}" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5 style="font-size: 14px;">Ibrahim NGONGO BUNDUKI</h5>
+                            <p class="text-primary">Directeur Pays</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/deo.jpg' %}" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5 style="font-size: 15px;">Deogratias HABAMUNGU BAHIDIKA</h5>
+                            <p class="text-primary">Sécretaire Général</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+    
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Partenariat</div>
+                <h1 class="display-6 mb-5">Nos organisations partenaires</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{% static 'img/ministère.jpg' %}" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                       
+                        <h5 class="mb-1">Ministère de la santé</h5>
+                        <span class="fst-italic">République Democratique du Congo</span>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+      <!-- Bailleur Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                
+                <h1 class="display-6 mb-5">Nos bailleurs des fonds</h1>
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
+                    I. Les membres de STAND-UP</div>
+                
+            </div>
+            
+           <p>
+            
+           <center>
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
+                   II. CREATING HOPE IN CONFLICT (CHIC)</div>
+            <h2 hidden class="display-6 mb-5"></h2>
+             <p class="text-dark mb-2" hidden>
+                                Grand défi humanitaire; un partenariat entre l'USAID, le gouvernement britanique, le ministère 
+                                des affaires étrangères des Pays-Bas et Affaires mondiales Canada, avec le soutien de Grands défis Canada</p>
+           </p>
+           <img style="width: 100%; height: 20%;" src="{% static 'img/logop.jpg' %}" alt="" srcset="">
+        </div>
+           </center>
+    </div>
+    <!-- Team End -->
+    
+    
+   
+  
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold text-primary mb-4">Stand<span class="text-white"> Up</span></h1>
+                    <p> Solutions Techniques adaptées et novatrices pour le développement universel des populations</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Adresse</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>90 Boulevard Alexandre Mahamba, Quartier Kyeshero,
+                     Goma, République Démocratique du Congo</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+243-997-775-244</p>
+                
+                    <p><i class="fa fa-envelope me-3"></i> info@mystandup.online</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Liens rapides</h5>
+                    <a class="btn btn-link" href="{% url 'apropos' %}">Apropos de nous</a>
+                    <a class="btn btn-link" href="{% url 'contact' %}">Contact</a>
+                    <a class="btn btn-link" href="{% url 'service' %}">Nos Services</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Newsletter</h5>
+                    <p>Inscrivez-vous à notre service de Newsletter </p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <form action="{% url 'subscribe' %}" method="post">
+                            {% csrf_token %}
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" name="email" type="email" required placeholder="votre adresse mail">
+                        <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">s'inscrire</button>
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="https://www.asblstandup.org/">www.asblstandup.org</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Conçu par<a href="">Standup soft</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/parallax/parallax.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
